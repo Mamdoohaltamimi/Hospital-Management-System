@@ -48,7 +48,7 @@ Hospital-Management/
 ### 1.  Clone the Repository :
 
 ```bash
-git clone 
+git clone https://github.com/Mamdoohaltamimi/Hospital-Management-System.git
 cd Hospital-Management
 ```
 
@@ -81,7 +81,7 @@ python main.py
 
 ###  Sample Credentials :
 
-- Username: admin@hms.com
+- Username: admin
 - Password: 1234
 (You can customize this in login.py)
 
@@ -111,13 +111,9 @@ The following diagram shows the relationships between core classes in the Hospit
 - Functional separation between logic, database, and interface
 - CLI and GUI support for managing hospital operations
 
-## Documentation
-
-The official project documentation (with diagrams) is available here : [HMS Project Documentation (PDF)](docs/project_documentation.pdf)
-
 ### Authors :
 
-- [Muhammad Ali Siddiqui](www.github.com/alibro005)
+- [Mamdooh Altamimi]
 
 ### References :
 

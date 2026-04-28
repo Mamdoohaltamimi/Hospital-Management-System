@@ -1,19 +1,41 @@
 # Hospital Management System – OOP Project (Python + MySQL)
 
 
-A Python-based Hospital Management System that combines ***Object-Oriented Programming***, a Tkinter GUI, CLI options, and **MySQL** integration. It enables users to manage patient data, doctor assignments, billing, and user authentication through a clean, modular architecture.
+## Project Overview
+
+This project has evolved from a basic Python Tkinter GUI into a comprehensive,Hospital Management System. It features a modern, intuitive interface built with CustomTkinter, designed to streamline patient, doctor, and appointment management, alongside robust billing, analytics, and activity logging capabilities.
+
+It combines ***Object-Oriented Programming***, a CustomTkinter GUI, and **MySQL** integration. It enables users to manage patient data, doctor assignments, billing, and user authentication through a clean, modular architecture.
 
 ---
 
-##  Features
+## Key Features
 
-- Login Authentication System  
--  Add / Delete Patients  
--  Add / Delete Doctors 
--  View Patient and Doctor Details  
--  Generate Billing Information  
--  GUI-based and CLI-based operation  
--  MySQL Database Integration  
+**Modern Pro Dashboard:** A sleek, professional user interface built with CustomTkinter, offering both Light and Dark modes.
+
+**Patient Management:** Efficient registration, viewing, and deletion of patient records. Includes smart ID generation and character-only name validation.
+
+**Doctor Management:** Comprehensive management of medical staff, with smart ID generation and character-only name validation.
+
+**Appointment Scheduling:** A dedicated module for booking, tracking, and managing patient appointments with specific doctors, including status updates.
+
+**Real-time Analytics:** An interactive dashboard featuring live statistics (Total Patients, Active Doctors, Today's Appointments) and visual charts (Disease Distribution, Patient Gender Ratio) for quick insights.
+
+**Unified Data Export:** Seamlessly export patient, doctor, and appointment data to either Excel (.xlsx) for data analysis or PDF (.pdf) for professional reports.
+
+**Professional PDF Invoicing:** Generate and save detailed patient invoices as professional PDF documents.
+
+**Activity Logs:** A robust logging system that tracks all major actions (additions, deletions, exports) within the system, enhancing security and accountability.
+
+**Smart ID Generation:** Automatic, gap-filling ID assignment (e.g., P001, D001, A001) ensuring unique and sequential IDs even after deletions.
+
+**Input Validation:** Strict validation for input fields (e.g., names accept only characters, age accepts only numbers) to maintain data integrity.
+
+**Database Auto-Migration:** Automatically creates missing tables and columns (like assigned_doctor_id) upon first run, ensuring smooth setup.
+
+**Context-Aware Search:** A dynamic search bar that filters data specifically within the currently active management view (Patients, Doctors, Appointments, Logs).
+
+**Login Authentication System:** Secure user authentication to access the system.
 
 ---
 
@@ -22,7 +44,10 @@ A Python-based Hospital Management System that combines ***Object-Oriented Progr
 - **Language:** Python  
 - **GUI:** Tkinter & CustomTkinter  
 - **Interface:** CLI and GUI  
-- **Database:** MySQL (`hospital_db`)  
+- **Database:** MySQL (`hospital_db`)
+- **Data Handling:** Pandas, Openpyxl
+- **Charting:** Matplotlib
+- **PDF Generation:** FPDF2
 - **Design Pattern:** Object-Oriented Programming  
 
 ---
@@ -58,15 +83,16 @@ cd Hospital-Management
 python -m venv .venv
 source .venv/bin/activate  # For Windows: .venv\Scripts\activate
 ```
-### 3.  Install Dependencies :
+### 3.  Install Required Libraries :
 
 ```
-pip install customtkinter mysql-connector-python
+pip install customtkinter mysql-connector-python pandas openpyxl matplotlib fpdf2
+
 ```
 ### 4. Set Up MySQL Database :
 
-- Make sure your MySQL server is running.
-- Open Database.txt and execute its SQL statements in your MySQL client (e.g., phpMyAdmin, MySQL Workbench, or terminal).
+- Ensure your MySQL server is running.
+- Open Database.txt and execute its SQL statements in your MySQL client (e.g., phpMyAdmin,XAMPP, MySQL Workbench, or terminal).
 - This will create the hospital_db database and necessary tables.
 
 ### 5.  Run the Application :
@@ -85,18 +111,6 @@ python main.py
 - Password: 1234
 (You can customize this in login.py)
 
-###  Screenshots
-
-###  Login Window :
-<img src="images/login_screen.png" alt="Login Window" width="450" height="200"/>
-
-### Main Screen :
-<img src="images/main_screen.png" alt="Add Patient" width="450" height="200"/>
-
-### Show Details :
-<img src="images/show_screen.png" alt="Add Patient" width="450" height="200"/>
-
-
 
 ## Class Diagram :
 The following diagram shows the relationships between core classes in the Hospital Management System for CLI version :
@@ -106,10 +120,12 @@ The following diagram shows the relationships between core classes in the Hospit
 ### Concepts Demonstrated :
 
 - Object-Oriented Programming (Inheritance, Encapsulation, Composition)
-- GUI development with Tkinter and CustomTkinter
+- GUI development with CustomTkinter
 - Integration of MySQL with Python using mysql-connector-python
 - Functional separation between logic, database, and interface
 - CLI and GUI support for managing hospital operations
+- Data visualization with Matplotlib
+- Professional report generation with FPDF2 and Pandas
 
 ### Authors :
 

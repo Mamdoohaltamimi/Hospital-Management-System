@@ -563,7 +563,7 @@ class HospitalGUI(ctk.CTkToplevel):
         except Exception as e:
             messagebox.showerror("Search Error", str(e))
 
-    def show_about_box(self): messagebox.showinfo("About", "Hospital Management System \n Developed by: Mamdooh Altamimi")
+    def show_about_box(self): messagebox.showinfo("About",  "Hospital Management System \n Developed by: Mamdooh Altamimi")
     def quit_app(self): self.quit(); os._exit(0)
 
 if __name__ == "__main__":
